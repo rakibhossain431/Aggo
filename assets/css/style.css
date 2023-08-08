@@ -182,6 +182,10 @@ select:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
  }
+ .hidden {
+  display: none;
+}
+
 
  .d-flex {
     display: -webkit-box !important;
@@ -429,7 +433,7 @@ select:focus {
   .main-menu-area nav ul li a:hover {
     color: var(--main-secondary);
   }
-  .main-menu-area nav ul li ul {
+  .main-menu-area nav ul li ul{
     margin-top: 0;
     text-align: left;
     opacity: 0;
@@ -506,6 +510,51 @@ select:focus {
   .main-menu-area nav ul li > a.active {
     color: var(--main-secondary);
   }
+  .main-menu-area nav ul li ul li .sub-dropdown {
+    margin-top: 0;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 15px;
+    transform: scaleY(0);
+    transform-origin: 0 0 0;
+    min-width: 170px;
+    width: fit-content;
+    z-index: 99999;
+    background: var(--white);
+    right: -140% !important;
+    left: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 8px;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  .main-menu-area nav ul li ul li:hover .sub-dropdown{
+    opacity: 1;
+    transform: scaleY(1);
+    visibility: visible;
+  }
+  .main-menu-area nav ul li ul li .sub-dropdown::before{
+    content: " ";
+    position: absolute;
+    position: absolute;
+    left: -12px;
+    top: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 12px solid var(--white);;
+  }
+  .main-menu-area nav ul li ul li .sub-dropdown::after{
+    content: " ";
+    position: absolute;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-right: 0px solid var(--white);;
+  }
+
   .header-fixed {
     height: 100px;
     left: 0;
@@ -1240,7 +1289,7 @@ select:focus {
   display: flex;
   gap: 10px;
 }
-.copyright-left-area .copyright-item li,
+.copyright-left-area .copyright-item li a,
 .copyright-area-inner .qry-copy {
   font-size: 14px;
   font-style: normal;
@@ -1248,11 +1297,12 @@ select:focus {
   line-height: 20px;
   color: var(--text-light);
   cursor: pointer;
+  transition: all 0.5s ease-out;
 }
 .copyright-area-inner .qry-copy a {
   color: var(--text-light);
 }
-.copyright-left-area .copyright-item li:hover{
+.copyright-left-area .copyright-item li a:hover{
   color: var(--main-secondary);
 }
 /*=======================================================================
@@ -1892,6 +1942,38 @@ select:focus {
   color: var(--white);
 }
 /*=======================================================================
+[06] portfolio Details Page One  Start Hear
+=========================================================================*/
+.project-content-shap::after{
+  content: "";
+  background-image: url(../images/svg/sign.svg);
+  width: 160px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  transform: translate(0, -50%);
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.project-view {
+  background-color: var(--shade-bg-3);
+}
+.project-view-video-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/*=======================================================================
 [02] Services Details Page  Start Hear
 =========================================================================*/
 .banner-3 {
@@ -2057,7 +2139,7 @@ select:focus {
 }
 .touch-form-box .form-control{
   padding: 14px 20px;
-  background: var(--shade-bg-1);
+  background-color: var(--shade-bg-1);
   border: 0px;
 }
 
@@ -2180,15 +2262,15 @@ select:focus {
   color: #fff;
   background: var(--main-primary);
 }
-.hidden {
-  display: none;
-}
-
 /*=======================================================================
 [08] Portfolio Layout Two Page  Start Hear
 =========================================================================*/
 .banner-6{
   background: url(../images/portfolio-two/portfolio-two-bg.png);
+}
+.portfolio-project-img,
+.portfolio-project-img img{
+  height: 100%;
 }
 /*=======================================================================
 [08]Blog Page  Start Hear
@@ -2618,11 +2700,184 @@ blockquote::before{
   margin-bottom: 0px;
 }
 
+/*=======================================================================
+[13] Support Page  Start Hear
+=========================================================================*/
+.banner-13{
+  background: url(../images/banner-bg/Support-bg.png);
+}
+.help-content .entry-content .entry-title .shap::after{
+  content: "";
+  background-image: url(../images/svg/Sign.svg);
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.card-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 65px;
+  border: 1px solid #D3D3D3;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+.card-box:hover{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+}
+.card-box .support-card-footer .support-btn{
+  background-color: var(--text-dark);
+  color: var(--white);
+}
+.card-box .support-card-footer .support-btn i{
+  color: var(--white);
+}
+.card-box .support-card-footer .support-btn:hover{
+  background: var(--main-primary);
+}
 
 
 
+/*=======================================================================
+[14] Teams Policy Page  Start Hear
+=========================================================================*/
+.banner-14 {
+  background: url(../images/banner-bg/Teams-policy-bg.png);
+}
+.policy-content .policy-item .entry-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px
+}
+.policy-content .policy-item ol{
+  padding-left: 20px;
+}
+.policy-content .policy-item ol li{
+  list-style: lower-alpha;
+}
+.policy-content .policy-item-2 ol li{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+.policy-content .policy-item-2 ol li .sub-list li{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  list-style: lower-roman;
+  margin-bottom: 8px;
+}
+/*=======================================================================
+[15] Teams Policy Page  Start Hear
+=========================================================================*/
+.banner-15{
+  background: url(../images/banner-bg/Teams-policy-bg.png);
+}
+.testimonial-item,
+.testimonial-item .slider-img .img img
+{
+  transition: all 0.5s ease-in-out;
+}
+.testimonial-item:hover{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.testimonial-item .slider-img .img{
+  overflow: hidden;
+}
+.testimonial-item .slider-img .img{
+  overflow: hidden;
+}
+.testimonial-item .slider-img .img img:hover{
+  transform: scale(1.3);
+}
+.testimonial-item .slider-img .video-icon img{
+  position: absolute;
+  top: 47%;
+  left: 45%;
+  padding: 10px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-
+/*=======================================================================
+[16] inquiry  Page  Start Hear
+=========================================================================*/
+.inquiry-shap::after{
+  content: "";
+  background-image: url(../images/svg/Sign.svg);
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.inquiry-box {
+  display: flex;
+}
+.inquiry-box .inquiry-box-left{
+  flex-basis: 45%;
+  background-color: var(--main-secondary);
+  padding: 1rem;
+}
+.inquiry-box .inquiry-box-left .inquiry-box-item{
+  color: var(--white);
+}
+.inquiry-box .inquiry-box-left .inquiry-box-item .contact-info .contact-info{
+  display: flex;
+  color: var(--white);
+}
+.inquiry-box .inquiry-box-left .inquiry-box-item .contact-info .contact-info-list{
+  display: flex;
+  align-items: center;
+}
+.inquiry-box .inquiry-box-left .inquiry-box-item .contact-info .contact-info-list i{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 18px;
+  background: rgba(255, 255, 256, 0.3);
+  border-radius: 50%;
+}
+.inquiry-box .inquiry-box-right{
+  flex-basis: 55%;
+  background-color: var(--white);
+  overflow: hidden;
+}
+.touch-form .touch-form-box .form-control-bg {
+  background-color: var(--white);
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  padding: 14px 20px;
+}
+.touch-form .touch-form-box .inquiry-btn i{
+  background: var(--main-primary);
+}
+.touch-form .touch-form-box .inquiry-btn:hover{
+  background: var(--main-primary);
+}
 
 /*=======================================================================
 [08] Under Construction Page  Start Hear

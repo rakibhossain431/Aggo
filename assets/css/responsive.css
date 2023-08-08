@@ -387,6 +387,29 @@
     .portfolio-details-about-aggo-border::after{
          width: 110px;
       }
+      .help-content .entry-content .entry-title .shap::after.benefits-sign::after{
+        width: 80px;
+        height: 40px;
+      }
+      .inquiry-shap::after{
+        width: 80px;
+        height: 40px;
+      }
+
+}
+/*=======================================================================
+[02] Inquiry page Layout Area Responsive Start Hear
+=========================================================================*/
+
+  @media only screen and (max-width: 991px) {
+    .inquiry-box {
+        /* display: flex; */
+        flex-direction: column-reverse;
+    }
+    .inquiry-box .inquiry-box-left,
+    .inquiry-box .inquiry-box-right{
+        flex-basis: 50%;
+      }
 
 }
 
