@@ -52,7 +52,7 @@ Version: 1.0.0
 [36] Member Area
 [37] Support Area
 [38] Policy Area
-[39] testimonial Area
+[39] testimonial Page
 [40] inquiry Area
 [41] Error Area
 [41] Modal Area
@@ -347,7 +347,7 @@ select:focus {
   .mt-80{
     margin-top: 80px !important;
   }
-  .mb-lg-80-md-40{
+  .mb-top-lg-80-md-40{
     margin-top: 80px !important;
   }
 
@@ -2616,90 +2616,7 @@ blockquote::before{
 .gallery figure figcaption {
   display: none;
 }
-.popup {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #fff;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out 0.2s;
-}
-.popup.pop {
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out 0s;
-}
-.popup.pop figure {
-  margin-top: 0;
-  opacity: 1;
-}
-.popup figure {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: 0 0;
-  margin-top: 30px;
-  opacity: 0;
-  animation: poppy 500ms linear both;
-}
-.popup figure img {
-  position: relative;
-  z-index: 2;
-}
-.popup figure figcaption {
-  position: absolute;
-  bottom: 50px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.78));
-  z-index: 2;
-  width: 100%;
-  padding: 100px 20px 20px 20px;
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 32px;
-}
-.popup figure figcaption small {
-  font-size: 11px;
-  display: block;
-  text-transform: uppercase;
-  margin-top: 12px;
-  text-indent: 3px;
-  opacity: 0.7;
-  letter-spacing: 1px;
-}
-.popup figure .shadow {
-  position: relative;
-  z-index: 1;
-  top: -56px;
-  margin: 0 auto;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  width: 98%;
-  height: 50px;
-  opacity: 0.9;
-  filter: blur(16px) contrast(1.5);
-  transform: scale(0.95, -0.7);
-  transform-origin: center bottom;
-}
-.popup .close {
-  position: absolute;
-  z-index: 3;
-  top: 10px;
-  right: 10px;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  background: url(#close);
-  border-radius: 25px;
-  background: rgba(0, 0, 0, .1);
-  box-shadow: 0 0 3px rgba(0, 0, 0, .2);
-}
-.popup .close svg {
-  width: 100%;
-  height: 100%;
-}
+
 .all-project-list,
 .digital-project-list,
 .design-project-list,
@@ -2903,6 +2820,9 @@ blockquote::before{
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.testimonial-paginated-box {
+  display: none;
 }
 
 /*=======================================================================

@@ -107,6 +107,18 @@ $(document).ready(function(){
 })
 
 
+// Testimonial Pagination
+$(document).ready(function(){
+  $(".testimonial-paginated-box").slice(0, 6).show();
+  $("#testLoadMore").on("click", function(e){
+      e.preventDefault();
+      $(".testimonial-paginated-box:hidden").slice(0, 4).slideDown();
+      if($(".testimonial-paginated-box:hidden").length == 0) {
+      $("#testLoadMore").text("No Content").addClass("noContent");
+      }
+  });
+})
+
 //  Portfolio Pagination Start Hear
 
 const paginationNumbers = document.getElementById("all-pagination-numbers");
