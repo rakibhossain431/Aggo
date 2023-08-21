@@ -102,7 +102,7 @@ p{
 	width:250px;
 	height:100%;
 	padding:0px 20px;
-	border-right:2px solid var(--main-secondary);
+	border-right:2px solid #dfdfe1;
 	z-index:10;
 }
 
@@ -122,7 +122,7 @@ p{
 	height:100%;
 	overflow:auto;
 	padding:0px 0px 30px;
-	background:var(--main-primary);
+	background:var(--main-secondary);
 	transition:all 1000ms ease;
 	-moz-transition:all 1000ms ease;
 	-webkit-transition:all 1000ms ease;
@@ -151,14 +151,14 @@ p{
 	display:block;
 	margin:0px;
 	padding:0px;
-	border-top:1px solid var(--text-light);	
+	border-bottom:1px solid #dfdfe1;
 }
 
 #sidebar .menu-box .sticky-menu > ul > li{
 	position:relative;
 	display:block;
 	padding:3px 30px;
-	border-bottom:1px solid var(--text-light);
+	border-bottom:1px solid #dfdfe1;
 	font-size:20px;
 	color:var(--white);
 	text-align:left;
@@ -201,15 +201,15 @@ p{
 
 #sidebar .menu-box .sticky-menu > ul > li.current a .fa,
 #sidebar .menu-box .sticky-menu > ul > li:hover a .fa{
-	/* left:15px; */
 	opacity:1;	
-	color: var(--main-secondary);
+	color: #dfdfe1;
+	line-height: 24px;
 }
 
 #sidebar .menu-box .sticky-menu > ul > li > a:hover,
 #sidebar .menu-box .sticky-menu > ul > li.current > a,
 #sidebar .menu-box .sticky-menu > ul > li.current-menu-item > a{
-	color:var(--main-secondary);	
+	color: #dfdfe1;	
 }
 
 #sidebar .copyright{
@@ -221,7 +221,10 @@ p{
 	font-size:13px;
 	color:var(--text-dark);
 	line-height:30px;
-	text-align:center;	
+	padding-left: 30px;
+}
+#sidebar .copyright a{
+	color: var(--text-dark);
 }
 
 /*** 
@@ -250,7 +253,7 @@ p{
 #content-section .sec-title{
 	position:relative;
 	padding:10px 20px 10px 50px;
-	background:var(--main-primary);
+	background:var(--main-secondary);
 	color:var(--text-dark);
 }
 
@@ -259,6 +262,7 @@ p{
 	font-size:24px;
 	text-transform:capitalize;
 	font-weight:600;
+	color: var(--text-dark) !important;
 }
 
 #content-section .sec-title h3{
@@ -307,7 +311,6 @@ p{
 	text-transform:uppercase;
 	margin-bottom:10px;
 	font-weight:600;
-	color: var(--main-tertiary);
 }
 
 .introduction .sec-content h3{

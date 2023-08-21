@@ -1,14 +1,9 @@
 /*
 == malihu jquery custom scrollbar plugin == 
 Version: 3.0.4 
-Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller 
-Author: malihu
-Author URI: http://manos.malihu.gr
 License: MIT License (MIT)
 */
-
 /*
-Copyright 2010 Manos Malihutsakis (email: manos@malihu.gr)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

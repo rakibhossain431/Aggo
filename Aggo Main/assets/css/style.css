@@ -480,6 +480,9 @@ select:focus {
     background: none;
     color: none;
   }
+  .w-100{
+    width: 100%;
+  }
 
 /*=======================================================================
 [02] Header Area Start Hear
@@ -2797,9 +2800,6 @@ blockquote::before{
 {
   transition: all 0.5s ease-in-out;
 }
-.testimonial-item:hover{
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
 .testimonial-item .slider-img .img{
   overflow: hidden;
 }
@@ -2903,6 +2903,9 @@ blockquote::before{
 .error-btn {
   background-color: var(--text-dark);
   color: var(--white);
+}
+.error-btn i {
+  color: var(--text-dark);
 }
 .error-btn:hover{
   background-color: var(--main-primary);
